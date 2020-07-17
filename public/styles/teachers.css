@@ -1,0 +1,128 @@
+/* global variables */
+:root {
+    --color-label: rgb(245, 229, 90);
+}
+
+/* card general style */
+.card {
+    background-color: white;
+    width: 70%;
+    min-height: 30%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 5% auto;
+    border-radius: 16px;
+    box-shadow: 2px 4px 6px -2px rgba(0, 0, 0, 0.3);
+    animation: up 400ms ease;
+}
+/* animations */
+@keyframes up {
+from {
+    opacity: 0;
+    transform: translateY(16px);
+}
+to {
+    opacity: 1;
+}
+}
+
+/* card box styles*/
+.card .avatar {
+    background: url("https://source.unsplash.com/collection/8874679/") no-repeat center center / cover;
+    border-radius: 16px 0 0 16px;
+}
+
+.card .details {
+    padding: 32px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    color: #086972;
+    font-weight: bold;
+}
+
+.details .description {
+    padding: 8px 0;
+}
+
+.details .description div:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.details .description div:nth-child(1) {
+    color: #777;
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+.details .description div:nth-child(2){
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details .description span {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    background-color: var(--color-dark);
+    border-radius: 16px;
+    font-size: 14px;
+}
+.details .description span + span {
+    margin-left: 4px;
+}
+
+.details .description div.started {
+    color: var(--color-rocket);
+}
+
+/* form */
+
+form input {
+    width: 100%;
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+}
+
+form input[type="radio"] {
+    width: initial;
+    margin-right: 8px;
+}
+
+form select.selectHole {
+    padding: 8px 32px;
+    background-color: var(--color-dark);
+    color: white
+    ;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form .details .description span.radio {
+    background-color: #086972;
+}
+
+form input::placeholder {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+button[type="submit"] {
+    margin-top: 32px;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #01a9b4;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}

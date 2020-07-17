@@ -1,0 +1,69 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap";
+
+:root {
+    --color-green: #50fa7b;
+    --color-rocket: #7159c1;
+    --color-dark: #282a36;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* === INDEX === */
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://rocketseat.com.br/static/images/launchbase/stars.svg");
+    background-color: var(--color-dark);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: #01a9b4;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3 );
+}
+
+.links {
+    font-size: 22px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.links a + a {
+    margin-left: 32px;
+}
+
+.links a.selected {
+    font-weight: bold;
+}
+
+.links a:hover {
+    font-weight: bold;
+    transition: color 200ms;
+}
+
+.links a::after {
+    content: "";
+    width: 0;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 300ms ease-in-out;
+}

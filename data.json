@@ -1,0 +1,24 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatarUrl": "https://google.com",
+      "name": "Guilherme Alves dos Santos ",
+      "birth": 969840000000,
+      "gender": "M",
+      "teachingMethod": "attending",
+      "services": "a",
+      "created_at": 1595014694577
+    },
+    {
+      "id": 2,
+      "avatarUrl": "https://google.com",
+      "name": "Guilherme Alves dos Santos ",
+      "birth": 969840000000,
+      "gender": "M",
+      "teachingMethod": "distance",
+      "services": "Matemática, Português, Sociologia",
+      "created_at": 1595014754130
+    }
+  ]
+}
