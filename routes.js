@@ -18,4 +18,6 @@ routes.post("/teachers", teachersFunctions.allFieldsFilled)
 
 routes.get("/teachers/:id", teachersFunctions.showProfile)
 
+routes.get("/teachers/:id/edit", teachersFunctions.editProfile)
+
 module.exports = routes

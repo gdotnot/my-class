@@ -5,13 +5,13 @@
 {% endblock styles %}
 
 {% block title %}
-    <title>Cadastrar professor(a) - My Class</title>
+    <title>Editar professor(a) - My Class</title>
 {% endblock title %}
 
 {% block content %}
     <form class="card" method="POST" action="/teachers">
 
-        <section class="avatar"></section>
+        <section class="avatar" style="background: url({{ teacher.avatarUrl }}) no-repeat center center / cover"></section>
 
         <section class="details">
 
@@ -19,7 +19,7 @@
 
             {% include "partials/teacher-fields.njk" %}
 
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Salvar</button>
 
         </section>
 

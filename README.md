@@ -38,17 +38,17 @@ This project and readme.md, will be updated according to the project evolution.
 ### :white_check_mark: Features
 * Teachers
 
-- [x] Create instructors
-- [ ] Edit instructors
-- [x] Show instructors
-- [ ] Delete instructors
+- [x] Create teacher
+- [x] Edit teacher
+- [x] Show teacher
+- [ ] Delete teacher
 
 * Students
 
-- [ ] Create members
-- [ ] Edit members
-- [ ] Show members
-- [ ] Delete members
+- [ ] Create students
+- [ ] Edit students
+- [ ] Show students
+- [ ] Delete students
 
 ---
 ## :computer: Technologies
@@ -109,6 +109,7 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 
 
 You can use the routes in url.
-Examples: http://localhost:5000/teachers/create and
-http://localhost:5000/teachers/AN_USER_ID/
+Examples: http://localhost:5000/teachers/create,
+http://localhost:5000/teachers/AN_USER_ID/ and
+http://localhost:5000/teachers/AN_USER_ID/edit
 

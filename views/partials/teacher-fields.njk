@@ -1,30 +1,41 @@
 <div class="description">
     <div>Foto de perfil</div>
     <div>
-        <input type="url" name="avatarUrl" placeholder="http://">
+        <input type="url" name="avatarUrl" placeholder="http://" value="{{ teacher.avatarUrl }}">
     </div>
 </div>
 
 <div class="description">
     <div>Nome completo</div>
     <div>
-        <input type="text" name="name" placeholder="Digite o nome aqui">
+        <input type="text" name="name" placeholder="Digite o nome aqui" value="{{ teacher.name }}">
     </div>
 </div>
 
 <div class="description">
     <div>Data de nascimento</div>
     <div>
-        <input type="date" name="birth">
+        <input type="date" name="birth" value="{{ teacher.birth }}">
     </div>
 </div>
 
 <div class="description">
     <div>Data de nascimento</div>
     <div>
-        <span class="radio"><input type="radio" name="gender" value="M" checked>Masculino</span>
-        <span class="radio"><input type="radio" name="gender" value="F">Feminino</span>
-        <span class="radio"><input type="radio" name="gender" value="NB">Não Binário</span>
+
+        <span class="radio"><input type="radio" name="gender" value="M"
+        {% if teacher.gender == "M" %}
+        checked
+        {% endif %}>Masculino</span>
+        <span class="radio"><input type="radio" name="gender" value="F"
+        {% if teacher.gender == "F" %}
+        checked
+        {% endif %}>Feminino</span>
+        <span class="radio"><input type="radio" name="gender" value="NB"
+        {% if teacher.gender == "NB" %}
+        checked
+        {% endif %}>Não Binário</span>
+
     </div>
 </div>
 
@@ -43,14 +54,20 @@
 <div class="description">
     <div>Tipo de aula</div>
     <div>
-        <span class="radio"><input type="radio" name="teachingMethod" value="attending" checked>Presencial</span>
-        <span class="radio"><input type="radio" name="teachingMethod" value="distance">EAD</span>
+        <span class="radio"><input type="radio" name="teachingMethod" value="attending"
+        {% if teacher.teachingMethod == "attending" %}
+        checked
+        {% endif %}>Presencial</span>
+        <span class="radio"><input type="radio" name="teachingMethod" value="distance"
+        {% if teacher.teachingMethod == "distance" %}
+        checked
+        {% endif %}>EAD</span>
     </div>
 </div>
 
 <div class="description">
     <div>Disciplinas</div>
     <div>
-        <input type="text" name="services" placeholder="Digite as disciplinas, separadas por virgula.">
+        <input type="text" name="services" placeholder="Digite as disciplinas, separadas por virgula." value="{{ teacher.services }}">
     </div>
 </div>

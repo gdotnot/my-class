@@ -1,7 +1,7 @@
 const fs = require("fs")
 const data = require("./data.json")
 const Intl = require("Intl")
-const { age } = require("./utils")
+const { age, date } = require("./utils")
 
 exports.allFieldsFilled = function allFieldsFilled(req, res) {
 
@@ -9,7 +9,12 @@ exports.allFieldsFilled = function allFieldsFilled(req, res) {
 
     for(key of keys) {
         if (req.body[key] == "")
-        return res.send("Por favor preencha todos os dados")
+        return res.send(
+        {
+            error: "Por favor preencha todos os dados",
+            status: 204
+        }
+      )
     }
 
     let { avatarUrl, name, birth, gender, graduation, teachingMethod, services } = req.body
@@ -33,7 +38,11 @@ exports.allFieldsFilled = function allFieldsFilled(req, res) {
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
         if(err) {
-            return res.send("Write file error")
+            return res.send({
+                error: "Write file error",
+                status: 500
+            }
+          )
         }
       }
     )
@@ -50,7 +59,8 @@ exports.showProfile = function showProfile(req, res) {
     )
 
     if(!foundTeacher){
-        return res.send({
+        return res.send(
+        {
             error: "Teacher not found!",
             status: 404
         }
@@ -65,5 +75,32 @@ exports.showProfile = function showProfile(req, res) {
     }
 
     return res.render("teachers/show", { teacher })
+
+}
+
+exports.editProfile = function editProfile(req, res) {
+
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find((teacher) => {
+        return teacher.id == id
+    }
+    )
+
+    if (!foundTeacher) {
+        return res.send(
+        {
+            error: "Teacher not found!",
+            status: 404
+        }
+      )
+    }
+
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth)
+    }
+
+    return res.render("teachers/edit", { teacher })
 
 }
