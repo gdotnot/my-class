@@ -1,18 +1,10 @@
-<h1 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="400px" />
-</h1>
-
 <h3 align="center">
-  Gym Manager
+  My Class
 </h3>
 <h4 align="center">
 	🚧  Project in progress...  🚧
 </h4>
 <p align="center">
-
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%23F8952D">
-  </a>
 
   <a href="LICENSE" >
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
@@ -20,8 +12,8 @@
 
 </p>
 
-# Gym Manager
-![Gym Manager](images/instructor_creation.png)
+# My Class
+![MyClass](images/register-teacher-page.png)
 
 # :bookmark_tabs: Index
 
@@ -35,23 +27,23 @@
 ---
 
 ## :clipboard: About
-This application is in development. The website has one goal - allow academies
-to manage their users and instructors, and have a better overview of all registered members.
+This application is in development. The website has one goal - allow web schools
+to manage their users and teachers, and have a better overview of all registered users.
 
-Users can edit their own information. It's based on the project developed during the classes from Rocketseat.
+Users can edit their own information. It's based on the project Gym manager developed during the classes from Rocketseat.
 This project and readme.md, will be updated according to the project evolution.
 
 ---
 
 ### :white_check_mark: Features
-* Instructors
+* Teachers
 
 - [x] Create instructors
-- [x] Edit instructors
+- [ ] Edit instructors
 - [x] Show instructors
 - [ ] Delete instructors
 
-* Members
+* Students
 
 - [ ] Create members
 - [ ] Edit members
@@ -84,14 +76,14 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 * First clone the repository with the command below.
 ```bash
     # Using Git bash, clone the repository
-    $ git clone https://github.com/Guilherme-A-Santos/gym-manager.git
+    $ git clone https://github.com/Guilherme-A-Santos/my-class.git
 ```
 
 * After this, enter in the project main folder.
 
 ```bash
     # Changing directory in the terminal/CMD
-    $ cd gym-manager
+    $ cd my-class
 ```
 * Then install all dependencies using the command `npm install`.
 
@@ -116,7 +108,7 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 ```
 
 
-*P.S: Some buttons aren't working yet, like the button that allows to edit a user. But you can use the routes in url.*
-*Examples: http://localhost:5000/instructors/create, http://localhost:5000/instructors/AN_USER_ID/edit and*
-*http://localhost:5000/instructors/AN_USER_ID/*
+You can use the routes in url.
+Examples: http://localhost:5000/teachers/create and
+http://localhost:5000/teachers/AN_USER_ID/
 
