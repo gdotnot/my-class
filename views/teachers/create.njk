@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teachers.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Cadastrar um professor(a) - My Class</title>
+{% endblock title %}
+
+{% block content %}
+    <form class="card" method="POST" action="/teachers">
+
+        <section class="avatar"></section>
+
+        <section class="details">
+
+            <h3>Novo(a) professor(a)</h3>
+
+            {% include "partials/teacher-fields.njk" %}
+
+            <button type="submit">Cadastrar</button>
+
+        </section>
+
+    </form>
+{% endblock content %}

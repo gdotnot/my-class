@@ -1,7 +1,10 @@
 const fs = require("fs")
 const data = require("./data.json")
+const Intl = require("Intl")
+const { age } = require("./utils")
 
 exports.allFieldsFilled = function allFieldsFilled(req, res) {
+
     const keys = Object.keys(req.body)
 
     for(key of keys) {
@@ -9,7 +12,7 @@ exports.allFieldsFilled = function allFieldsFilled(req, res) {
         return res.send("Por favor preencha todos os dados")
     }
 
-    let { avatarUrl, name, birth, gender, teachingMethod, services } = req.body
+    let { avatarUrl, name, birth, gender, graduation, teachingMethod, services } = req.body
 
 
     id = Number(data.teachers.length + 1)
@@ -22,6 +25,7 @@ exports.allFieldsFilled = function allFieldsFilled(req, res) {
         name,
         birth,
         gender,
+        graduation,
         teachingMethod,
         services,
         created_at
@@ -33,4 +37,33 @@ exports.allFieldsFilled = function allFieldsFilled(req, res) {
         }
       }
     )
+
+}
+
+exports.showProfile = function showProfile(req, res) {
+
+    const { id } = req.params
+
+    const foundTeacher = data.teachers.find((teacher) => {
+        return teacher.id == id
+      }
+    )
+
+    if(!foundTeacher){
+        return res.send({
+            error: "Teacher not found!",
+            status: 404
+        }
+      )
+    }
+
+    const teacher = {
+        ...foundTeacher,
+        age: age(foundTeacher.birth),
+        services: foundTeacher.services.split(","),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
+    }
+
+    return res.render("teachers/show", { teacher })
+
 }

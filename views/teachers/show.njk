@@ -1,0 +1,74 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teachers.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Professor - My Class</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="card">
+
+        <section class="avatar" style="background: url({{ teacher.avatarUrl }}) no-repeat center center / cover;"></section>
+
+        <section class="details">
+
+            <h3>Detalhes do perfil</h3>
+
+            <div class="description">
+                <div>Professor(a)</div>
+                <div>{{ teacher.name }}</div>
+            </div>
+
+            <div class="description">
+                <div>Idade</div>
+                <div>{{ teacher.age }}</div>
+            </div>
+
+            <div class="description">
+                <div>Sexo</div>
+                <div>
+                    {% if teacher.gender == "M" %}
+                    Masculino
+                    {% elif teacher.gender == "F" %}
+                    Feminino
+                    {% else %}
+                    Não Binário
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="description">
+                <div>Grau de escolaridade</div>
+                <div>{{ teacher.graduation }}</div>
+            </div>
+
+            <div class="description">
+                <div>Tipo de aula</div>
+                <div>
+                    <span>
+                    {{ "Presencial" if teacher.teachingMethod == "attending" else "EAD"}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="description">
+                <div>Disciplinas</div>
+                <div>
+                    {% for service in teacher.services %}
+                    <span>{{ service }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="description">
+                <div>Ministra desde</div>
+                <div class="started">{{ teacher.created_at }}</div>
+            </div>
+
+        </section>
+
+    </div>
+{% endblock content %}

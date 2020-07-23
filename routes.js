@@ -7,17 +7,15 @@ routes.get("/", (req, res) => {
 })
 
 routes.get("/teachers", (req, res) => {
-    return res.render("teachers/teachers-page")
+    return res.render("teachers/teachers")
 })
 
 routes.get("/teachers/create", (req, res) => {
-    return res.render("teachers/teacher-create")
+    return res.render("teachers/create")
 })
 
-routes.post("/teachers", teachersFunctions.allFieldsFilled  )
+routes.post("/teachers", teachersFunctions.allFieldsFilled)
 
-routes.get("/students", (req, res) => {
-    res.render("students/students-page")
-})
+routes.get("/teachers/:id", teachersFunctions.showProfile)
 
 module.exports = routes
