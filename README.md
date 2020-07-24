@@ -41,7 +41,7 @@ This project and readme.md, will be updated according to the project evolution.
 - [x] Create teacher
 - [x] Edit teacher
 - [x] Show teacher
-- [ ] Delete teacher
+- [x] Delete teacher
 
 * Students
 

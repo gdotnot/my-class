@@ -1,7 +1,7 @@
 const fs = require("fs")
 const data = require("./data.json")
 const Intl = require("Intl")
-const { age, date } = require("./utils")
+const { age, date, graduation } = require("./utils")
 
 exports.allFieldsFilled = function allFieldsFilled(req, res) {
 
@@ -71,7 +71,8 @@ exports.showProfile = function showProfile(req, res) {
         ...foundTeacher,
         age: age(foundTeacher.birth),
         services: foundTeacher.services.split(","),
-        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at)
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
+        graduation: graduation(foundTeacher.graduation)
     }
 
     return res.render("teachers/show", { teacher })
@@ -102,5 +103,78 @@ exports.editProfile = function editProfile(req, res) {
     }
 
     return res.render("teachers/edit", { teacher })
+
+}
+
+exports.updateProfile = function updateProfile(req, res) {
+
+    const id = Number(req.body.id)
+    let index = 0
+
+    const foundTeacher = data.teachers.find((teacher, foundIndex) => {
+        if(teacher.id == id){
+            index = foundIndex
+            return true
+        }
+    })
+
+
+    if (!foundTeacher)
+        return res.send(
+            {
+                error: "Teacher not found",
+                status: 404
+            }
+        )
+
+    const teacher = {
+        ...foundTeacher,
+        ...req.body,
+        birth: Date.parse(req.body.birth)
+    }
+
+    data.teachers[index] = teacher
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if(err){
+            return res.send(
+                {
+                    error: "Update files gone wrong",
+                    status: 500
+                }
+            )
+        }
+
+        return res.redirect(`/teachers/${id}`)
+    })
+
+}
+
+exports.deleteProfile = function deleteProfile(req, res) {
+
+    const id = Number(req.body.id)
+    let index = 0
+
+    const foundTeacher = data.teachers.find((teacher, foundIndex) => {
+        if(teacher.id == id){
+            index = foundIndex
+            return true
+        }
+    })
+
+    data.teachers.pop(index)
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), (err) => {
+        if(err){
+            return res.send(
+                {
+                    error: "Deletation error",
+                    status: 500
+                }
+            )
+        }
+
+        return res.redirect("/teachers")
+    })
 
 }

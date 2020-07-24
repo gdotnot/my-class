@@ -68,6 +68,17 @@
                 <div class="started">{{ teacher.created_at }}</div>
             </div>
 
+            <div class="submit-buttons">
+
+                <a href="/teachers/{{ teacher.id }}/edit" class="button">Editar</a>
+
+                <form action="/teachers?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value="{{ teacher.id }}">
+                    <button id="delete" type="submit">Deletar</button>
+                </form>
+
+            </div>
+
         </section>
 
     </div>

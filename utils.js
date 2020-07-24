@@ -24,5 +24,26 @@ module.exports = {
 
         return `${year}-${month}-${day}`
 
+    },
+    graduation: function graduation(option) {
+
+        switch (option) {
+
+            case "ensinoMedio":
+                return "Ensino Médio Completo"
+
+            case "ensinoSuperior":
+                return "Ensino Superior Completo"
+
+            case "mestrado":
+                return "Mestrado"
+
+            case "doutorado":
+                return "Doutorado"
+
+            default:
+                break;
+
+        }
     }
 }

@@ -1,6 +1,7 @@
 /* global variables */
 :root {
     --color-label: rgb(245, 229, 90);
+    --color-titles-dark-blue: #086972;
 }
 
 /* card general style */
@@ -15,6 +16,7 @@
     box-shadow: 2px 4px 6px -2px rgba(0, 0, 0, 0.3);
     animation: up 400ms ease;
 }
+
 /* animations */
 @keyframes up {
 from {
@@ -38,7 +40,7 @@ to {
 
 .details h3 {
     text-transform: uppercase;
-    color: #086972;
+    color: var(--color-titles-dark-blue);
     font-weight: bold;
 }
 
@@ -74,12 +76,13 @@ to {
     border-radius: 16px;
     font-size: 14px;
 }
+
 .details .description span + span {
     margin-left: 4px;
 }
 
 .details .description div.started {
-    color: var(--color-rocket);
+    color: var(--color-titles-dark-blue);
 }
 
 /* form */
@@ -106,8 +109,8 @@ form select.selectRole {
     text-align: center;
 }
 
-form .details .description span.radio {
-    background-color: #086972;
+.description span.radio {
+    background-color: var(--color-titles-dark-blue);
 }
 
 form input::placeholder {
@@ -115,7 +118,8 @@ form input::placeholder {
     font-size: 18px;
 }
 
-button[type="submit"] {
+button[type="submit"],
+a.button {
     margin-top: 32px;
     width: 100%;
     padding: 16px 0;
@@ -123,5 +127,27 @@ button[type="submit"] {
     border-radius: 8px;
     color: white;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+a.button:hover,
+button[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.submit-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.submit-buttons button:last-child {
+    background-color: rgb(250, 74, 74);
 }

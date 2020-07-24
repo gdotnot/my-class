@@ -20,4 +20,8 @@ routes.get("/teachers/:id", teachersFunctions.showProfile)
 
 routes.get("/teachers/:id/edit", teachersFunctions.editProfile)
 
+routes.put("/teachers", teachersFunctions.updateProfile)
+
+routes.delete("/teachers", teachersFunctions.deleteProfile)
+
 module.exports = routes

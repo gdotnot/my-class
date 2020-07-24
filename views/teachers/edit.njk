@@ -1,3 +1,4 @@
+
 {% extends "layout.njk" %}
 
 {% block styles %}
@@ -9,19 +10,26 @@
 {% endblock title %}
 
 {% block content %}
-    <form class="card" method="POST" action="/teachers">
 
-        <section class="avatar" style="background: url({{ teacher.avatarUrl }}) no-repeat center center / cover"></section>
+<div class="card">
 
-        <section class="details">
+    <section class="avatar" style="background: url({{ teacher.avatarUrl }}) no-repeat center center / cover"></section>
 
-            <h3>Novo(a) professor(a)</h3>
+    <section class="details">
+
+        <form method="POST" action="/teachers?_method=PUT">
+
+            <h3>Editar Professor(a)</h3>
 
             {% include "partials/teacher-fields.njk" %}
 
             <button type="submit">Salvar</button>
+            <input type="hidden" name="id" value="{{ teacher.id }}">
 
-        </section>
+        </form>
 
-    </form>
+    </section>
+
+</div>
+
 {% endblock content %}
