@@ -2,11 +2,12 @@
 :root {
     --color-label: rgb(245, 229, 90);
     --color-titles-dark-blue: #086972;
+    --color-light-blue: #01a9b4;
 }
 
 /* card general style */
 .card {
-    background-color: white;
+    background-color: #fff;
     width: 70%;
     min-height: 30%;
     display: grid;
@@ -65,12 +66,14 @@ to {
     font-size: 18px;
 }
 
-.details .description span {
+.details .description span,
+tbody tr td:nth-child(2) span,
+.acompanhamento {
     display: inline-block;
     padding: 8px 16px;
     margin-top: 8px;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     font-weight: bold;
     background-color: var(--color-dark);
     border-radius: 16px;
@@ -103,13 +106,14 @@ form input[type="radio"] {
 form select.selectRole {
     padding: 8px 32px;
     background-color: var(--color-dark);
-    color: white;
+    color: #fff;
     border-radius: 8px;
     font-weight: bold;
     text-align: center;
 }
 
-.description span.radio {
+.description span.radio,
+.acompanhamento {
     background-color: var(--color-titles-dark-blue);
 }
 
@@ -123,9 +127,9 @@ a.button {
     margin-top: 32px;
     width: 100%;
     padding: 16px 0;
-    background-color: #01a9b4;
+    background-color: var(--color-light-blue);
     border-radius: 8px;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-size: 20px;
 }
@@ -150,4 +154,74 @@ button[type="submit"]:hover {
 
 .submit-buttons button:last-child {
     background-color: rgb(250, 74, 74);
+}
+
+/* === Teachers === */
+
+.table-container {
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--color-titles-dark-blue);
+}
+
+tr {
+  display: grid;
+  grid-template-columns: 20% 20% 50% 10%;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 4px 2px 6px -4px black;
+}
+
+#show {
+    text-decoration: none;
+    color: #FFF;
+    background-color: var(--color-light-blue);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+tbody tr td:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+thead tr th:last-child {
+    text-align: center;
 }

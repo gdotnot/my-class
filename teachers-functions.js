@@ -3,6 +3,12 @@ const data = require("./data.json")
 const Intl = require("Intl")
 const { age, date, graduation } = require("./utils")
 
+exports.allTeachers = function allTeachers(req, res) {
+
+    return res.render("teachers/index", { teachers: data.teachers })
+
+}
+
 exports.allFieldsFilled = function allFieldsFilled(req, res) {
 
     const keys = Object.keys(req.body)

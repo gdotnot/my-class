@@ -108,8 +108,7 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 ```
 
 
-You can use the routes in url.
-Examples: http://localhost:5000/teachers/create,
+You can use the buttons or the routes in url.
+Examples: http://localhost:5000/teachers/, http://localhost:5000/teachers/create,
 http://localhost:5000/teachers/AN_USER_ID/ and
 http://localhost:5000/teachers/AN_USER_ID/edit
-

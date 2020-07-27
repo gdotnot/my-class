@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/teachers.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Professor - My Class</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="card table-container">
+        <table width="100%">
+
+            <thead>
+                <tr>
+                    <th>Nome completo</th>
+                    <th>Ensino</th>
+                    <th>Acompanhamento</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {% for teacher in teachers %}
+                    <tr>
+                        <td>
+                            <span style="background-image: url({{ teacher.avatarUrl }})"></span>
+                            {{ teacher.name }}
+                        </td>
+
+                        <td>
+                            <span>
+                                {{ "Presencial" if teacher.teachingMethod == "attending" else "EAD" }}
+                            </span>
+                        </td>
+
+                        <td>
+
+                            {% for service in teacher.services.split(",") %}
+                                <span class="acompanhamento">{{ service }}</span>
+                            {% endfor %}
+
+                        </td>
+
+                        <td>
+                            <a id="show" href="/teachers/{{ teacher.id }}">Ver</a>
+                        </td>
+
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+{% endblock content %}
