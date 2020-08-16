@@ -26,7 +26,7 @@ This project and readme.md, will be updated according to the project evolution.
 # :bookmark_tabs: Index
 
   - [:clipboard: About](#clipboard-about)
-    - [:white_check_mark: Features](#white_check_mark-features)
+    - [:sparkles: Features](#sparkles-features)
   - [:rocket: Demonstration](#rocket-demonstration)
     - [:white_check_mark: How to create a new teacher](#white_check_mark-how-to-create-a-new-teacher)
     - [:pencil: How to edit a teacher](#pencil-how-to-edit-a-teacher)
@@ -40,7 +40,7 @@ This project and readme.md, will be updated according to the project evolution.
 
 ---
 
-### :white_check_mark: Features
+### :sparkles: Features
 * Teachers
 
 - [x] Create teacher
@@ -125,9 +125,9 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 
     # You can acess too using the port:5300
 ```
+---
 
 ## :alien: Author
----
 
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/53957603?s=400&u=8f57de9b12d0a0681d801886391c23e639da2c5e&v=4" width="100px;" alt=""/>
  <br />
