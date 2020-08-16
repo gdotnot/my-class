@@ -45,17 +45,6 @@
       "teachingMethod": "attending",
       "services": "Física, Química, Sociologia",
       "created_at": 1595462378179
-    },
-    {
-      "id": "4",
-      "avatarUrl": "https://images.unsplash.com/photo-1553975969-e43c7b4d75fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=960&q=80",
-      "name": "Karen McCoy",
-      "birth": 721526400000,
-      "gender": "F",
-      "graduation": "ensinoMedio",
-      "teachingMethod": "attending",
-      "services": "Inglês, Francês",
-      "created_at": 1595497538742
     }
   ]
 }

@@ -27,8 +27,12 @@ This project and readme.md, will be updated according to the project evolution.
 
   - [:clipboard: About](#clipboard-about)
     - [:white_check_mark: Features](#white_check_mark-features)
+  - [:rocket: Demonstration](#rocket-demonstration)
+    - [:white_check_mark: How to create a new teacher](#white_check_mark-how-to-create-a-new-teacher)
+    - [:pencil: How to edit a teacher](#pencil-how-to-edit-a-teacher)
+    - [:boom: How to delete a teacher](#boom-how-to-delete-a-teacher)
   - [:computer: Technologies](#computer-technologies)
-  - [:computer: Dependencies](#computer-dependencies)
+  - [:package: Dependencies](#package-dependencies)
   - [Requirements](#requirements)
   - [:file_folder: How to install](#file_folder-how-to-install-and-use)
   - [:alien: Author](#alien-author)
@@ -52,6 +56,20 @@ This project and readme.md, will be updated according to the project evolution.
 - [x] Delete students
 
 ---
+
+## :rocket: Demonstration
+Demonstrate how the application works, all the process are the same to the students.
+
+### :white_check_mark: How to create a new teacher
+![teacher-creation](gifs/teacher-creation.gif)
+
+### :pencil: How to edit a teacher
+![teacher-creation](gifs/teacher-edition.gif)
+
+### :boom: How to delete a teacher
+![teacher-creation](gifs/teacher-deletion.gif)
+
+---
 ## :computer: Technologies
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -59,7 +77,7 @@ This project and readme.md, will be updated according to the project evolution.
 * [NodeJs](https://www.nodejs.org/)
 
 ---
-## :computer: Dependencies
+## :package: Dependencies
 * [Express](https://expressjs.com/pt-br/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
 * [Nodemon](https://nodemon.io/)
