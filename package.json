@@ -1,6 +1,6 @@
 {
   "name": "challenges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all -p nodemon browsersync",

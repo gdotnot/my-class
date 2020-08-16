@@ -1,16 +1,27 @@
-<h3 align="center">
+<h3 align="center" style="font-size: 30px; font-weight: bold; margin-bottom: 32px">
   My Class
 </h3>
-<p align="center">
+
+<p align="center" style="margin-bottom: 50px">
 
   <a href="LICENSE" >
     <img alt="License" src="https://img.shields.io/badge/license-MIT-%23F8952D">
   </a>
+  <a href="https://docs.npmjs.com/about-npm/" targer="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/v/npm?color=g">
+  </a>
 
+  <img src="https://img.shields.io/static/v1?label=version&message=v1.0.1&color=01a9b4&style=<STYLE>&logo=<LOGO>">
 </p>
 
-# My Class
-![MyClass](images/register-teacher-page.png)
+## :clipboard: About
+This website application has one goal - allow web schools
+to manage their users and teachers, and have a better overview of all registered users.
+
+Users can edit their own information. It's based on the project Gym manager developed during the classes from Rocketseat.
+This project and readme.md, will be updated according to the project evolution.
+
+---
 
 # :bookmark_tabs: Index
 
@@ -20,16 +31,8 @@
   - [:computer: Dependencies](#computer-dependencies)
   - [Requirements](#requirements)
   - [:file_folder: How to install](#file_folder-how-to-install-and-use)
-  - [:alien: Author](#alie-author)
-
----
-
-## :clipboard: About
-This website application has one goal - allow web schools
-to manage their users and teachers, and have a better overview of all registered users.
-
-Users can edit their own information. It's based on the project Gym manager developed during the classes from Rocketseat.
-This project and readme.md, will be updated according to the project evolution.
+  - [:alien: Author](#alien-author)
+  - [:page_facing_up: license](#page_facing_up-license)
 
 ---
 
@@ -110,8 +113,15 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 
  <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/53957603?s=400&u=8f57de9b12d0a0681d801886391c23e639da2c5e&v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Guilherme A. Santos</b></sub>
+ <sub><b style="font-size: 22px">Guilherme A. Santos</b></sub>
 
+Made with ❤️ by **Guilherme A. Santos**
 
-Made with ❤️ by Guilherme A. Santos
+[![Linkedin Badge](https://img.shields.io/badge/-Guilherme-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/guilherme-alves-dos-santos/)](https://www.linkedin.com/in/guilherme-alves-dos-santos/)
+[![Gmail Badge](https://img.shields.io/badge/-g.dotnot@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:g.dotnot@gmail.com)](mailto:g.dotnot@gmail.com)
+[![Rocketseat Badge](https://img.shields.io/badge/-g.dotnot-7159c1?style=flat-square&logo=Apache-RocketMQ&logoColor=white&link=https://app.rocketseat.com.br/me/g-dotnot)](https://app.rocketseat.com.br/me/g-dotnot)
 
+---
+
+## :page_facing_up: License
+This project is under **MIT license**. For more info, open the *LICENSE* file.

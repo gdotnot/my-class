@@ -137,7 +137,8 @@ exports.update = function (req, res) {
     const student = {
         ...foundStudent,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        grade: grade(req.body.grade)
     }
 
     data.students[index] = student
