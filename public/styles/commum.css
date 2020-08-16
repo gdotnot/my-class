@@ -67,3 +67,7 @@ header {
     width: 100%;
     transition: width 300ms ease-in-out;
 }
+
+.links a.active {
+    font-weight: bold;
+}

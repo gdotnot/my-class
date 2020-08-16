@@ -1,0 +1,84 @@
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/styles.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Aluno(a) - My Class</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="card">
+
+        <section class="avatar" style="background: url({{ student.avatarUrl }}) no-repeat center center / cover;"></section>
+
+        <section class="details">
+
+            <h3>Detalhes do perfil</h3>
+
+            <div class="description">
+                <div>Aluno(a)</div>
+                <div>{{ student.name }}</div>
+            </div>
+
+            <div class="description">
+                <div>Aniversário</div>
+                <div>{{ student.birth }}</div>
+            </div>
+
+            <div class="description">
+                <div>Sexo</div>
+                <div>
+                    {% if student.gender == "M" %}
+                    Masculino
+                    {% elif student.gender == "F" %}
+                    Feminino
+                    {% else %}
+                    Não Binário
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="description">
+                <div>Email</div>
+                <div>
+                    <span id="email">
+                        {{ student.email }}
+                    </span>
+                </div>
+            </div>
+
+            <div class="description">
+                <div>Grau de escolaridade</div>
+                <div>{{ student.grade }}</div>
+            </div>
+
+            <div class="description">
+                <div>Tipo de aula</div>
+                <div>
+                    <span>
+                    {{ "Presencial" if student.classMethod == "attending" else "EAD"}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="submit-buttons">
+
+                <a href="/students/{{ student.id }}/edit" class="button">Editar</a>
+
+                <form id="form-delete" action="/students?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value="{{ student.id }}">
+                    <button  type="submit">Deletar</button>
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+<script src="../../scripts/deleteConfirm.js"></script>
+{% endblock scripts %}

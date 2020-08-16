@@ -1,0 +1,35 @@
+
+{% extends "layout.njk" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/styles.css">
+{% endblock styles %}
+
+{% block title %}
+    <title>Editar aluno(a) - My Class</title>
+{% endblock title %}
+
+{% block content %}
+
+<div class="card">
+
+    <section class="avatar" style="background: url({{ student.avatarUrl }}) no-repeat center center / cover"></section>
+
+    <section class="details">
+
+        <form method="POST" action="/students?_method=PUT">
+
+            <h3>Editar aluno(a)</h3>
+
+            {% include "partials/student-fields.njk" %}
+
+            <button type="submit">Salvar</button>
+            <input type="hidden" name="id" value="{{ student.id }}">
+
+        </form>
+
+    </section>
+
+</div>
+
+{% endblock content %}

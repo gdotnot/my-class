@@ -5,19 +5,19 @@
 {% endblock styles %}
 
 {% block title %}
-    <title>Cadastrar professor(a) - My Class</title>
+    <title>Cadastrar aluno(a) - My Class</title>
 {% endblock title %}
 
 {% block content %}
-    <form class="card" method="POST" action="/teachers">
+    <form class="card" method="POST" action="/students">
 
         <section class="avatar"></section>
 
         <section class="details">
 
-            <h3>Novo(a) professor(a)</h3>
+            <h3>Novo(a) aluno(a)</h3>
 
-            {% include "partials/teacher-fields.njk" %}
+            {% include "partials/student-fields.njk" %}
 
             <button type="submit">Cadastrar</button>
 

@@ -10,43 +10,44 @@
 
 {% block content %}
     <div class="card table-container">
-        <a href="/teachers/create">Novo Professor</a>
+        <a href="/students/create">Novo Aluno</a>
         <table width="100%">
 
             <thead>
                 <tr>
                     <th>Nome completo</th>
-                    <th>Ensino</th>
-                    <th>Acompanhamento</th>
+                    <th>Email</th>
+                    <th>Ano Escolar</th>
+                    <th>Carga Horária</th>
                     <th>Ação</th>
                 </tr>
             </thead>
 
             <tbody>
 
-                {% for teacher in teachers %}
+                {% for student in students %}
                     <tr>
                         <td>
-                            <span style="background-image: url({{ teacher.avatarUrl }})"></span>
-                            {{ teacher.name }}
+                            <span style="background-image: url({{ student.avatarUrl }})"></span>
+                            {{ student.name }}
                         </td>
 
                         <td>
-                            <span id="method">
-                                {{ "Presencial" if teacher.teachingMethod == "attending" else "EAD" }}
+                            {{ student.email }}
+                        </td>
+
+                        <td>
+                            {{ student.grade }}
+                        </td>
+
+                        <td>
+                            <span id="workload">
+                                {{ student.workload }}
                             </span>
                         </td>
 
                         <td>
-
-                            {% for service in teacher.services.split(",") %}
-                                <span id="services">{{ service }}</span>
-                            {% endfor %}
-
-                        </td>
-
-                        <td>
-                            <a id="show" href="/teachers/{{ teacher.id }}">Ver</a>
+                            <a id="show" href="/students/{{ student.id }}">Ver</a>
                         </td>
 
                     </tr>

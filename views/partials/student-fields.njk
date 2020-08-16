@@ -1,0 +1,84 @@
+<div class="description">
+    <div>Foto de perfil</div>
+    <div>
+        <input type="url" name="avatarUrl" placeholder="http://" value="{{ student.avatarUrl }}">
+    </div>
+</div>
+
+<div class="description">
+    <div>Nome completo</div>
+    <div>
+        <input type="text" name="name" placeholder="Digite o nome aqui" value="{{ student.name }}">
+    </div>
+</div>
+
+<div class="description">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" value="{{ student.birth }}">
+    </div>
+</div>
+
+<div class="description">
+    <div>Email</div>
+    <div>
+        <input type="email" name="email" value="{{ student.email }}">
+    </div>
+</div>
+
+<div class="description">
+    <div>Sexo</div>
+    <div>
+
+        <span class="radio"><input type="radio" name="gender" value="M"
+        {% if student.gender == "M" %}
+        checked
+        {% endif %}>Masculino</span>
+        <span class="radio"><input type="radio" name="gender" value="F"
+        {% if student.gender == "F" %}
+        checked
+        {% endif %}>Feminino</span>
+        <span class="radio"><input type="radio" name="gender" value="NB"
+        {% if student.gender == "NB" %}
+        checked
+        {% endif %}>Não Binário</span>
+
+    </div>
+</div>
+
+<div class="description">
+    <div>Ano escolar</div>
+    <div>
+        <select class="selectRole" name="grade">
+            <option value="EF5">5º Ano do Ensino Fundamental</option>
+            <option value="EF6">6º Ano do Ensino Fundamental</option>
+            <option value="EF7">7º Ano do Ensino Fundamental</option>
+            <option value="EF8">8º Ano do Ensino Fundamental</option>
+            <option value="EF9">9º Ano do Ensino Fundamental</option>
+            <option value="EM1">1º Ano do Ensino Médio</option>
+            <option value="EM2">2º Ano do Ensino Médio</option>
+            <option value="EM3">3º Ano do Ensino Médio</option>
+        </select>
+    </div>
+</div>
+
+<div class="description">
+    <div>Tipo de aula</div>
+    <div>
+        <span class="radio"><input type="radio" name="classMethod" value="attending"
+        {% if student.classMethod == "attending" %}
+        checked
+        {% endif %}>Presencial</span>
+        <span class="radio"><input type="radio" name="classMethod" value="distance"
+        {% if student.classMethod == "distance" %}
+        checked
+        {% endif %}>EAD</span>
+    </div>
+</div>
+
+<div class="description">
+    <div>Carga horária semanal</div>
+    <div>
+        <input type="number" name="workload" value="{{ student.workload }}">
+    </div>
+</div>

@@ -22,7 +22,13 @@ module.exports = {
         const month = `0${date.getUTCMonth() + 1}`.slice(-2)
         const day = `0${date.getUTCDate()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+                day,
+                month,
+                year,
+                iso: `${year}-${month}-${day}`,
+                birthday: `${day}/${month}`
+            }
 
     },
     graduation: function graduation(option) {
@@ -44,6 +50,35 @@ module.exports = {
             default:
                 break;
 
+        }
+    },
+    grade: function grade(option) {
+
+        switch (option) {
+
+            case "EF5":
+                return "5º Ano do Ensino Fundamental"
+
+            case "EF6":
+                return "6º Ano do Ensino Fundamental"
+
+            case "EF7":
+                return "7º Ano do Ensino Fundamental"
+
+            case "EF8":
+                return "8º Ano do Ensino Fundamental"
+
+            case "EF9":
+                return "9º Ano do Ensino Fundamental"
+
+            case "EM1":
+                return "1º Ano do Ensino Médio"
+
+            case "EM2":
+                return "2º Ano do Ensino Médio"
+
+            case "EM3":
+                return "3º Ano do Ensino Médio"
         }
     }
 }

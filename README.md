@@ -1,9 +1,6 @@
 <h3 align="center">
   My Class
 </h3>
-<h4 align="center">
-	🚧  Project in progress...  🚧
-</h4>
 <p align="center">
 
   <a href="LICENSE" >
@@ -23,11 +20,12 @@
   - [:computer: Dependencies](#computer-dependencies)
   - [Requirements](#requirements)
   - [:file_folder: How to install](#file_folder-how-to-install-and-use)
+  - [:alien: Author](#alie-author)
 
 ---
 
 ## :clipboard: About
-This application is in development. The website has one goal - allow web schools
+This website application has one goal - allow web schools
 to manage their users and teachers, and have a better overview of all registered users.
 
 Users can edit their own information. It's based on the project Gym manager developed during the classes from Rocketseat.
@@ -45,10 +43,10 @@ This project and readme.md, will be updated according to the project evolution.
 
 * Students
 
-- [ ] Create students
-- [ ] Edit students
-- [ ] Show students
-- [ ] Delete students
+- [x] Create students
+- [x] Edit students
+- [x] Show students
+- [x] Delete students
 
 ---
 ## :computer: Technologies
@@ -104,11 +102,16 @@ It's recommended to use a code editor like [VsCode](https://code.visualstudio.co
 ```bash
     # The project will run in the port:3000 if you're using browser-sync
 
-    # You can acess too using the port:5000
+    # You can acess too using the port:5300
 ```
 
+## :alien: Author
+---
 
-You can use the buttons or the routes in url.
-Examples: http://localhost:5000/teachers/, http://localhost:5000/teachers/create,
-http://localhost:5000/teachers/AN_USER_ID/ and
-http://localhost:5000/teachers/AN_USER_ID/edit
+ <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/53957603?s=400&u=8f57de9b12d0a0681d801886391c23e639da2c5e&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Guilherme A. Santos</b></sub>
+
+
+Made with ❤️ by Guilherme A. Santos
+
